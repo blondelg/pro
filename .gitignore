@@ -1,0 +1,24 @@
+
+# Exclude everythings
+*
+
+# Except
+!.gitignore
+!admin.py
+!apps.py
+!models.py
+!urls.py
+!views.py
+!README.md
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+!/templates
+!/static
+=======
+>>>>>>> parent of 51b9a91... add dirs static media templates
+=======
+>>>>>>> parent of 51b9a91... add dirs static media templates
+=======
+>>>>>>> parent of 51b9a91... add dirs static media templates
