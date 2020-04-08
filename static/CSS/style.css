@@ -29,6 +29,14 @@ body {
   color: #000;
 }
 
+.animate-top{
+    position:absolute;
+    animation:animatetop 0.4s
+  }
+  @keyframes animatetop{
+    from{top:40%;opacity:0} to{top:80%;opacity:1}
+  }
+
 .caption span.border {
   background-color: #111;
   color: #fff;
