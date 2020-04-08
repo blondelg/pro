@@ -1,1 +1,6 @@
 __pycache__
+__init__.py
+migrations/
+static/admin/
+static/django_extensions/
+tests.py
