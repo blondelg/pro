@@ -4,6 +4,7 @@ body {
 
 }
 
+/* settings for coming soon page */
 .body_cover {
   background-image: url('coming_soon_d_jimenez.jpg');
   background-repeat: no-repeat;
@@ -12,6 +13,12 @@ body {
   background-size: cover;
 }
 
+.display_bottom_left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: white;
+}
 
 .caption {
   position: absolute;
