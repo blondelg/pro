@@ -166,7 +166,7 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .nav_elt {display: none;}
   .nav_elt_left {display: block;}
   .navbar .icon {
@@ -190,7 +190,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .navbar.responsive {
     position: fixed;
     display: flex;
