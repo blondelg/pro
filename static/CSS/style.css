@@ -1,7 +1,211 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  margin: 0;
 
+}
+
+/* Useful class */
+.elt-center {
+  text-align: center;
+}
+
+.container_view {
+  padding: 128px 16px;
+}
+
+/* Footer settings */
+footer {
+  color: #fff;
+  background-color: #000;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: block;
+  text-align: center;
+}
+
+/* Settings studies view */
+
+/* Settings projects view */
+
+/* Settings skills view */
+
+#skills {
+  background-color: #dddddd;
+}
+
+/* Settings contact view */
+
+#contact {
+  background-color: #dddddd;
+}
+
+.contact_img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  height:auto;
+}
+
+.container_contact p i {
+  margin-right: 2%;
+}
+
+.btn_footer {
+  border: none;
+  color: black;
+  background-color:white;
+  padding: 14px 28px;
+  font-size: 105%;
+}
+
+.btn_footer p {margin:0;}
+
+.gh_icon {
+  color:white;
+}
+
+/* Settup Experiences view */
+
+#expe {
+  background-color: #dddddd;
+}
+
+/* Settup About view */
+
+
+.about_avatar {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  height: auto;
+}
+
+.about_text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: auto;
+  text-align: justify;
+}
+
+/* Settup first view */
+.titre_principal {
+  position: absolute;
+  max-width:100%;
+  font-size: 50px;
+  top: 25%;
+  color:white;
+  left: 10%;
+}
+
+.sous_titre_principal {
+  position: absolute;
+  max-width:100%;
+  font-size: 40px;
+  top: 40%;
+  color:white;
+  left: 10%;
+}
+
+.image_header {
+  box-sizing: inherit;
+  position: relative;
+  display:block;
+  height:100vw;
+}
+
+.img_vitrine {
+
+  background-image: url('reza-namdari-ZgZsKFnSbEA-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  height:100vh;
+}
+
+
+/* setting the top navbar */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  position:fixed;
+  width:100%;
+  z-index:1;
+  top:0;
+}
+
+.nav_elt {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color:black;
+}
+
+.nav_elt_left {
+  float: left;
+}
+
+
+.nav_elt:hover {
+  background-color: #d8d8d8;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav_elt {display: none;}
+  .nav_elt_left {display: block;}
+  .navbar .icon {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    color: black;
+  }
+
+  .navbar .icon:hover {
+    background-color: #d8d8d8;
+  }
+
+  .animate-navbar{
+      /* position:absolute; */
+      animation:animatebar 0.4s
+    }
+    @keyframes animatebar{
+      from{top:-100%;opacity:0} to{top:0%;opacity:1}
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: fixed;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 /* settings for coming soon page */

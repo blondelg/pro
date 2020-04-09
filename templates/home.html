@@ -1,13 +1,94 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container_wip_picture">
-<img src="{% static 'wip.gif' %}"  alt="En cours de developpement" />
-<center>
-  <h1>
-    En construction
-  </h1>
-</center>
+<body>
 
-</div>
+  <!-- Navbar -->
+  <div class="navbar" id="resp_navbar">
+    <a href="javascript:void(0);" class="icon" onclick="respNavbar()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a class="nav_elt" onclick="respNavbar()" href="#contact">CONTACT</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#studies">STUDIES</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#skills">SKILLS</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#projects">PROJECTS</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#expe">EXP</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#about">ABOUT</a>
+    <a class="nav_elt nav_elt_left" onclick="closeNavbar()" href="#top">GB</a>
+  </div>
+
+  <!-- First page -->
+  <div class="img_vitrine"  id="top">
+    <span class="titre_principal">Geoffroy Blondel</span>
+    <span class="sous_titre_principal">Freelance - Data Analyst</span>
+  </div>
+
+  <!-- About -->
+  <div id="about" class="container_view">
+    <h3 class="elt-center">ABOUT</h3>
+    <img src="{% static 'photo_avatar.jpg' %}" alt="Avatar" class="about_avatar">
+    <div class="about_text">
+      <p>Présentation de jojo, j'aime bien faire des lettes de motive pour Alice, faire les course,
+      faire des bons petits plats, regarder des films. Et plein d'autres choses comme voyager et programmer.</p>
+    </div>
+  </div>
+
+  <!-- Experiences -->
+  <div id="expe" class="container_view">
+    <h3 class="elt-center">EXPERIENCES</h3>
+  </div>
+
+  <!-- Projects -->
+  <div id="projects" class="container_view">
+    <h3 class="elt-center">PROJECTS</h3>
+  </div>
+
+  <!-- Skills -->
+  <div id="skills" class="container_view">
+    <h3 class="elt-center">SKILLS</h3>
+  </div>
+
+  <!-- Studies and formation  -->
+  <div id="studies" class="container_view">
+    <h3 class="elt-center">STUDIES</h3>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact" class="container_view">
+    <h3 class="elt-center">CONTACT</h3>
+    <p><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>Address  :  14 rue de Bizerte, 75017, Paris</p>
+    <p><i class="fa fa-phone fa-2x" aria-hidden="true"></i>Phone : +33 6 80 56 68 64</p>
+    <p><i class="fa fa-envelope fa-2x" aria-hidden="true"></i>Email  :  geoffroy.blondel@gmail.com</p>
+    <p><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>Linkedin  :  <a href="https://www.linkedin.com/in/geoffroy-blondel-5416b893/">https://www.linkedin.com/in/geoffroy-blondel-5416b893/</a></p>
+
+    <img src="{% static 'lars-greefhorst-xYB1xfCnpg0-unsplash.jpg' %}" class="contact_img">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+     <button class="btn_footer" type="button" onclick="window.location.href = '#top';">
+       <p><i class="fa fa-chevron-up"></i>To the top</p>
+     </button>
+     <p><a href="https://github.com/blondelg/pro_app"><i class="fa fa-github fa-2x gh_icon"></i></a></p>
+     <p>Powered by Geoffroy Blondel</p>
+  </footer>
+
+<script>
+function respNavbar() {
+  var x = document.getElementById("resp_navbar");
+  if (x.className === "navbar") {
+    x.className += " responsive animate-navbar";
+  } else {
+    x.className = "navbar";
+  }
+}
+
+function closeNavbar() {
+  resp_navbar.className = "navbar";
+}
+
+
+</script>
+
+</body>
 {% endblock %}
