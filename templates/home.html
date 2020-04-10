@@ -14,7 +14,7 @@
     <a class="nav_elt" onclick="respNavbar()" href="#projects">PROJECTS</a>
     <a class="nav_elt" onclick="respNavbar()" href="#expe">EXP</a>
     <a class="nav_elt" onclick="respNavbar()" href="#about">ABOUT</a>
-    <a class="nav_elt nav_elt_left" onclick="closeNavbar()" href="#top">GB</a>
+    <a class="nav_elt nav_elt_left" onclick="closeNavbar()" href="#top" id="exit_menu">GB</a>
   </div>
 
   <!-- First page -->
@@ -78,13 +78,16 @@ function respNavbar() {
   var x = document.getElementById("resp_navbar");
   if (x.className === "navbar") {
     x.className += " responsive animate-navbar";
+    document.getElementById("exit_menu").innerHTML = "CLOSE X";
   } else {
     x.className = "navbar";
+    document.getElementById("exit_menu").innerHTML = "GB";
   }
 }
 
 function closeNavbar() {
   resp_navbar.className = "navbar";
+  document.getElementById("exit_menu").innerHTML = "GB";
 }
 
 
