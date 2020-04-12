@@ -25,12 +25,12 @@ class Projet(models.Model):
     pro_order = models.IntegerField(choices=ORDER, default=20)
     pro_display = models.BooleanField(default=False)
 
-class Skill(models.Model):
-    ski_name =
-    ski_level =
-    ski_type =
-    ski_order = models.IntegerField(choices=ORDER, default=20)
-    ski_display = models.BooleanField(default=False)
+# class Skill(models.Model):
+#     ski_name =
+#     ski_level =
+#     ski_type =
+#     ski_order = models.IntegerField(choices=ORDER, default=20)
+#     ski_display = models.BooleanField(default=False)
 
 class Study(models.Model):
     pass
