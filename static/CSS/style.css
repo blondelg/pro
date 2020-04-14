@@ -37,7 +37,7 @@ footer {
 /* Settings contact view */
 
 #contact {
-  background-color: #ECECEC;
+  background-color: white;
 }
 
 .contact_img {
@@ -70,12 +70,63 @@ footer {
 /* Settup Experiences view */
 
 #expe {
-  background-image: url('bethany-legg-75nbwHfDsnY-unsplash.jpg');
+  background-image: url('photos_2018_5_10_fst_brown-nature-texture-wood.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   padding-bottom: 40vw;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.space_exp {
+  height:15vh;
+}
+
+.bloc_exp {
+  display: inline-block;
+}
+
+.bloc_exp h4 {
+  padding:0;
+  margin:1vw;
+}
+
+.collapse_icon {
+  float:right;
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%,-50%);
+
+}
+
+
+.collapsible {
+  position: relative;
+  background-color: rgba(229,229,229,0.5);
+  color: rgba(112,112,112,1);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.add_color {
+  background-color: rgba(185,185,185,0.5);
+}
+
+.active, .collapsible:hover {
+
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgba(255,255,255,0.3);
 }
 
 /* Settup About view */
@@ -117,7 +168,6 @@ footer {
 .about_col p {
   text-align: justify;
 }
-
 
 /* Settup first view */
 .titre_principal {
@@ -198,20 +248,75 @@ footer {
 .icon-bar {font-size: 1.2vw;}
 .icon {font-size: 1.2vw;}
 
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.4s;
+}
+
+.overlay-content {
+  position: relative;
+  display: inline-block;
+  top: 10vh;
+  width: 100%;
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 20vw;
+}
+
+
+.overlay a {
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+.overlay .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10vw;
+}
+
 /* Responsive settings */
 p {font-size: 1.17vw}
 h1 {font-size: }
 h2 {font-size: }
 h3 {font-size: 1.39vw}
 h4 {font-size: }
+h5 {font-size: }
+h6 {font-size: }
 
 @media screen and (max-width: 1000px) {
 
   p {font-size: 3vw}
   h1 {font-size: }
   h2 {font-size: }
-  h3 {font-size: 8vw}
-  h4 {font-size: 6vw}
+  h3 {font-size: 6vw}
+  h4 {
+    font-size: 4vw;
+    padding:1vw;
+    margin:0;
+  }
+  h5 {
+    font-size: ;
+    padding:1vw;
+    margin:0;
+  }
+  h6 {
+    font-size: ;
+    padding:1vw;
+    margin:0;
+  }
 
   .about_avatar {
     border-radius: 50%;
@@ -227,8 +332,12 @@ h4 {font-size: }
     width: 100%;
   }
 
+  .bloc_exp h4 {
+    font-size: 3vw;
+  }
+
   .fa-4x {
-    font-size: 15vw;
+    font-size: 10vw;
   }
 
   .container_view {
@@ -271,6 +380,16 @@ h4 {font-size: }
     margin-top: 10vw;
   }
 
+  .overlay {overflow-y: auto;}
+  .overlay a {
+    font-size: 10vw;
+    padding-bottom: 5vw;
+  }
+  .overlay .closebtn {
+  font-size: 20vw;
+  padding: 2vw 6vw;
+  }
+
   .nav_elt {display: none;}
   .nav_elt_left {display: block;}
   .navbar .icon {
@@ -284,14 +403,6 @@ h4 {font-size: }
   .navbar .icon:hover {
     background-color: white;
   }
-
-  .animate-navbar{
-      /* position:absolute; */
-      animation:animatebar 0.4s
-    }
-    @keyframes animatebar{
-      from{top:-100%;opacity:0} to{top:0%;opacity:1}
-    }
 
   .navbar.responsive {
     position: fixed;

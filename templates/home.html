@@ -5,17 +5,31 @@
 
   <!-- Navbar -->
   <div class="navbar" id="resp_navbar">
-    <a href="javascript:void(0);" class="icon" onclick="respNavbar()">
+    <a href="javascript:void(0);" class="icon" onclick="openNav()">
       <i class="fa fa-bars icon-bar"></i>
     </a>
     <a class="nav_elt" onclick="respNavbar()" href="#contact">CONTACT</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#references">REFERENCES</a>
     <a class="nav_elt" onclick="respNavbar()" href="#studies">STUDIES</a>
     <a class="nav_elt" onclick="respNavbar()" href="#skills">SKILLS</a>
     <a class="nav_elt" onclick="respNavbar()" href="#projects">PROJECTS</a>
     <a class="nav_elt" onclick="respNavbar()" href="#expe">EXP</a>
     <a class="nav_elt" onclick="respNavbar()" href="#about">ABOUT</a>
-    <a class="nav_elt nav_elt_left" onclick="closeNavbar()" href="#top" id="exit_menu">GB</a>
+    <a class="nav_elt nav_elt_left" href="#top" id="exit_menu">GB</a>
   </div>
+
+  <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a onclick="closeNav()" href="#about">ABOUT</a>
+    <a onclick="closeNav()" href="#expe">EXP</a>
+    <a onclick="closeNav()" href="#projects">PROJECTS</a>
+    <a onclick="closeNav()" href="#skills">SKILLS</a>
+    <a onclick="closeNav()" href="#studies">STUDIES</a>
+    <a onclick="closeNav()" href="#references">REFERENCES</a>
+    <a onclick="closeNav()" href="#contact">CONTACT</a>
+  </div>
+</div>
 
   <!-- First page -->
   <div class="img_vitrine"  id="top">
@@ -55,6 +69,77 @@
   <!-- Experiences -->
   <div id="expe" class="container_view">
     <h3 class="elt-center">EXPERIENCES</h3>
+    <div class="space_exp"></div>
+
+    <button class="collapsible">
+      <div class="bloc_exp">
+        <h4>Data Analyst - Python Developper</h4>
+        <h4>Home Delivery Services - Melbourne - Australie</h4>
+      </div>
+      <div class="collapse_icon">
+        <i class="fas fa-plus"></i>
+      </div>
+    </button>
+    <div class="content">
+      <p>
+        Exploitation des données brutes pour les différents services
+        <br><i><b>Python Pandas</b></i>
+      </p>
+      <p>
+        Développement des évolutions du logiciel interne de gestion des données
+        <br><i><b>Python Pandas Git Bitbucket</b></i>
+      </p>
+      <p>
+        Développement d'un serveur de monitoring
+        <br><i><b>Python Matplotlib Linux AWS</b></i>
+      </p>
+    </div>
+
+    <button class="collapsible add_color">
+      <div class="bloc_exp">
+        <h4>Data Analyst</h4>
+        <h4>Comutitres - Paris - France</h4>
+      </div>
+      <div class="collapse_icon">
+        <i class="fas fa-plus"></i>
+      </div>
+    </button>
+    <div class="content">
+      <p>Conception et optimisation de process et reporting - <b>SQL VBA Python</b></p>
+      <p>Création de requêtes et investigation dans de grands volumes de données - <b>SQL, Python</b></p>
+      <p>Scripting - <b>Python, SQL</b></p>
+    </div>
+
+    <button class="collapsible">
+      <div class="bloc_exp">
+        <h4>Front Office Support Analyst</h4>
+        <h4>Axa IM - Greenwich - USA</h4>
+      </div>
+      <div class="collapse_icon">
+        <i class="fas fa-plus"></i>
+      </div>
+    </button>
+    <div class="content">
+      <p>Exploitation des données brutes pour les différents services - <b>Python Pandas</b></p>
+      <p>Développement des évolutions du logiciel interne de gestion des données - <b>Python Pandas Git Bitbucket</b></p>
+      <p>Développement d'un serveur de monitoring - <b>Python Matplotlib Linux AWS</b></p>
+    </div>
+
+    <button class="collapsible add_color">
+      <div class="bloc_exp">
+        <h4>Extra Financial Analyst</h4>
+        <h4>Amundi - Paris - France</h4>
+      </div>
+      <div class="collapse_icon">
+        <i class="fas fa-plus"></i>
+      </div>
+    </button>
+    <div class="content">
+      <p>Exploitation des données brutes pour les différents services - <b>Python Pandas</b></p>
+      <p>Développement des évolutions du logiciel interne de gestion des données - <b>Python Pandas Git Bitbucket</b></p>
+      <p>Développement d'un serveur de monitoring - <b>Python Matplotlib Linux AWS</b></p>
+    </div>
+
   </div>
 
   <!-- Projects -->
@@ -70,6 +155,11 @@
   <!-- Studies and formation  -->
   <div id="studies" class="container_view">
     <h3 class="elt-center">STUDIES</h3>
+  </div>
+
+  <!-- References -->
+  <div id="references" class="container_view">
+    <h3 class="elt-center">REFERENCES</h3>
   </div>
 
   <!-- Contact -->
@@ -93,20 +183,29 @@
   </footer>
 
 <script>
-function respNavbar() {
-  var x = document.getElementById("resp_navbar");
-  if (x.className === "navbar") {
-    x.className += " responsive animate-navbar";
-    document.getElementById("exit_menu").innerHTML = "CLOSE X";
-  } else {
-    x.className = "navbar";
-    document.getElementById("exit_menu").innerHTML = "GB";
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
   }
-}
 
-function closeNavbar() {
-  resp_navbar.className = "navbar";
-  document.getElementById("exit_menu").innerHTML = "GB";
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+  }
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+      this.lastElementChild.innerHTML = "<i class=\"fas fa-plus\"></i>";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      this.lastElementChild.innerHTML = "<i class=\"fas fa-minus\"></i>";
+    }
+  });
 }
 
 
