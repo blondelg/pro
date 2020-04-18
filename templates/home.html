@@ -10,22 +10,22 @@
     </a>
     <a class="nav_elt" onclick="respNavbar()" href="#contact">CONTACT</a>
     <a class="nav_elt" onclick="respNavbar()" href="#references">REFERENCES</a>
-    <a class="nav_elt" onclick="respNavbar()" href="#studies">STUDIES</a>
-    <a class="nav_elt" onclick="respNavbar()" href="#skills">SKILLS</a>
-    <a class="nav_elt" onclick="respNavbar()" href="#projects">PROJECTS</a>
-    <a class="nav_elt" onclick="respNavbar()" href="#expe">EXP</a>
-    <a class="nav_elt" onclick="respNavbar()" href="#about">ABOUT</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#studies">ETUDES</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#skills">COMPETENCES</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#projects">PROJETS</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#expe">EXPERIENCES</a>
+    <a class="nav_elt" onclick="respNavbar()" href="#about">APROPOS</a>
     <a class="nav_elt nav_elt_left" href="#top" id="exit_menu">GB</a>
   </div>
 
   <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-    <a onclick="closeNav()" href="#about">ABOUT</a>
-    <a onclick="closeNav()" href="#expe">EXP</a>
-    <a onclick="closeNav()" href="#projects">PROJECTS</a>
-    <a onclick="closeNav()" href="#skills">SKILLS</a>
-    <a onclick="closeNav()" href="#studies">STUDIES</a>
+    <a onclick="closeNav()" href="#about">APROPOS</a>
+    <a onclick="closeNav()" href="#expe">EXPERIENCES</a>
+    <a onclick="closeNav()" href="#projects">PROJETS</a>
+    <a onclick="closeNav()" href="#skills">COMPETENCES</a>
+    <a onclick="closeNav()" href="#studies">ETUDES</a>
     <a onclick="closeNav()" href="#references">REFERENCES</a>
     <a onclick="closeNav()" href="#contact">CONTACT</a>
   </div>
@@ -39,7 +39,7 @@
 
   <!-- About -->
   <div id="about" class="container_view">
-    <h3 class="elt-center">ABOUT</h3>
+    <h3 class="elt-center">A PROPOS</h3>
     <img src="{% static 'photo_avatar.jpg' %}" alt="Avatar" class="about_avatar">
     <div class="about_text">
       <p>Présentation de jojo, j'aime bien faire des lettes de motive pour Alice, faire les course,
@@ -105,7 +105,7 @@
 
   <!-- Projects -->
   <div id="projects" class="container_view">
-    <h3 class="elt-center">PROJECTS</h3>
+    <h3 class="elt-center">PROJETS</h3>
 
     {% for row in project %}
     <div class="row_proj">
@@ -138,7 +138,7 @@
 
   <!-- Skills -->
   <div id="skills" class="container_view">
-    <h3 class="elt-center">SKILLS</h3>
+    <h3 class="elt-center">COMPETENCES</h3>
     <div class="skill_row">
     <div class="brain_box">
       <i class="fas fa-tools"></i>
@@ -173,7 +173,7 @@
 
   <!-- Studies and formation  -->
   <div id="studies" class="container_view">
-    <h3 class="elt-center">STUDIES</h3>
+    <h3 class="elt-center">ETUDES</h3>
     <div class="space_exp"></div>
     {% for elt in study %}
     <h4>{{ elt.0 }} : {{ elt.1 }}, <span>{{ elt.2 }}</span></h4>
@@ -184,11 +184,12 @@
   <div id="references" class="container_view">
     <h3 class="elt-center">REFERENCES</h3>
     <div class="space_exp"></div>
-
-    {% for elt in ref %}
-    <p>{{ elt.0 }}</p>
-    <p>{{ elt.1 }}</p>
-    {% endfor %}
+    <div class="ref_col">
+      {% for elt in ref %}
+      <p>&quot;{{ elt.0 }}&quot;</p>
+      <p class="ref_auth">{{ elt.1 }}</p>
+      {% endfor %}
+    </div>
 
   </div>
 

@@ -32,9 +32,28 @@ footer {
   background-attachment: fixed;
   background-size: cover;
   padding-bottom: 20vw;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.5);
   background-blend-mode: lighten;
 }
+
+.ref_col {
+  width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#references p {
+  text-align: left;
+  font-size: 2vw;
+}
+
+#references .ref_auth {
+  font-size: 1.5vw;
+  text-align: right;
+  font-style: italic;
+  padding-top: 0;
+}
+
 /* Skills view */
 #skills {
 overflow:auto;
@@ -423,6 +442,70 @@ h6 {font-size: }
 
   .about_col i {
     font-size: 10vw;
+  }
+
+  /* Projet  */
+  .column_proj {
+    padding: 1vw;
+    width:100%;
+    border-width: 1vw;
+
+  }
+
+  .column_proj h4 {
+    margin: 2vh;
+  }
+
+  .proj_title h4 {
+    font-size: 5vw;
+    margin:0;
+  }
+
+  .proj_title i {
+    font-size: 5vw;
+    padding:2vw;
+  }
+
+  .column_proj p {
+    margin-top: 0.5vw;
+    padding-bottom: : 3vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 3vw;
+  }
+
+  .project_skills {
+    margin-top: 0.7vw;
+    bottom: 0.7vw;
+  }
+
+  .project_skills p {
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0;
+  }
+
+  .project_skills i {
+    padding: 2vw;
+  }
+
+  /* References  */
+  .ref_col {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #references p {
+    text-align: left;
+    font-size: 5vw;
+  }
+
+  #references .ref_auth {
+    font-size: 4vw;
+    text-align: right;
+    font-style: italic;
+    padding-top: 0;
   }
 
   /* projet */
