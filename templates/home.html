@@ -48,7 +48,14 @@
 
     <!-- Columns with domains of skills -->
     <div class="about_row">
+    {% for elt in about %}
       <div class="about_col">
+        <i class="{{ elt.0 }}"></i>
+        <h4>{{ elt.1 }}</h4>
+        <p>{{ elt.2 }}</p>
+      </div>
+    {% endfor %}
+      <!-- <div class="about_col">
         <i class="fas fa-database fa-4x fa-fw"></i>
         <h4>Data</h4>
         <p>Présentation de jojo, j'aime bien faire des lettes de motive pour Alice, faire les course, faire des bons petits plats, regarder des films. Et plein d'autres choses comme voyager et programmer.</p>
@@ -62,7 +69,7 @@
         <i class="fas fa-file-code fa-4x fa-fw"></i>
         <h4>Web developpement</h4>
         <p>Présentation de jojo, j'aime bien faire des lettes de motive pour Alice, faire les course, faire des bons petits plats, regarder des films. Et plein d'autres choses comme voyager et programmer.</p>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -72,12 +79,20 @@
 
 
   <h3 class="elt-center">EXPERIENCES</h3>
-
   <div class="space_exp"></div>
-  <h4>Mai 2010 -> Oct 2019 : Data Analyst - Python Developper, <span>Home Delivery Services, Melbourne - Australie</span></h4>
+
+
+  {% for elt in experience %}
+  <h4>{{ elt.0 }} -> {{ elt.1 }} : {{ elt.2 }}, <span>{{ elt.3 }}, {{ elt.4 }}</span></h4>
+  {% endfor %}
+
+
+  <!-- <h4>Mai 2010 -> Oct 2019 : Data Analyst - Python Developper, <span>Home Delivery Services, Melbourne - Australie</span></h4>
   <h4>Jan 2018 -> Fev 2019 : Data Analyst, <span>Comutitres, Paris - France</span></h4>
   <h4>Sep 2015 -> Mar 2017 : Front Office Support Analyst, <span>Axa IM, Greenwich - USA</span></h4>
-  <h4>Sep 2014 -> Sep 2015 : Extra Financial Analyst, <span>Amundi, Paris - France</span></h4>
+  <h4>Sep 2014 -> Sep 2015 : Extra Financial Analyst, <span>Amundi, Paris - France</span></h4> -->
+
+
   <div class="resume">
     <a href="{% static 'FR_Geoffroy_Blondel.pdf' %}" download>
       <i class="fas fa-file-pdf fa-3x"></i>

@@ -20,7 +20,7 @@ class About(models.Model):
 class Experience(models.Model):
     exp_compagny_name = models.CharField(max_length=30)
     exp_geo = models.CharField(max_length=30)
-    exp_poste = models.CharField(max_length=30, default="")
+    exp_poste = models.CharField(max_length=60, default="")
     exp_start = models.DateField()
     exp_stop = models.DateField()
     exp_order = models.IntegerField(choices=ORDER, default=20)
