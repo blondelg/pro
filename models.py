@@ -74,3 +74,16 @@ class Study(models.Model):
 
     def __str__(self):
         return self.stu_description
+
+class Reference(models.Model):
+    ref_description = models.CharField(max_length=300,null=True)
+    ref_auteur = models.CharField(max_length=100,null=True)
+    ref_order = models.IntegerField(choices=ORDER, default=20)
+    ref_display = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name = "Reference"
+        ordering = ['ref_order']
+
+    def __str__(self):
+        return self.ref_auteur
