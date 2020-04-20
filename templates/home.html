@@ -57,44 +57,17 @@
         <p>{{ elt.2 }}</p>
       </div>
     {% endfor %}
-      <!-- <div class="about_col">
-        <i class="fas fa-database fa-4x fa-fw"></i>
-        <h4>Data</h4>
-        <p>Présentation de jojo, j'aime bien faire des lettes de motive pour Alice, faire les course, faire des bons petits plats, regarder des films. Et plein d'autres choses comme voyager et programmer.</p>
-      </div>
-      <div class="about_col">
-        <i class="fab fa-python fa-4x fa-fw"></i>
-        <h4>Programming</h4>
-        <p>Présentation de jojo, j'aime bien faire des lettes de motive pour Alice, faire les course, faire des bons petits plats, regarder des films. Et plein d'autres choses comme voyager et programmer.</p>
-      </div>
-      <div class="about_col">
-        <i class="fas fa-file-code fa-4x fa-fw"></i>
-        <h4>Web developpement</h4>
-        <p>Présentation de jojo, j'aime bien faire des lettes de motive pour Alice, faire les course, faire des bons petits plats, regarder des films. Et plein d'autres choses comme voyager et programmer.</p>
-      </div> -->
     </div>
   </div>
 
   <!-- Experiences -->
 
   <div id="expe" class="container_view">
-
-
   <h3 class="elt-center">EXPERIENCES</h3>
   <div class="space_exp"></div>
-
-
   {% for elt in experience %}
   <h4>{{ elt.0 }} -> {{ elt.1 }} : {{ elt.2 }}, <span>{{ elt.3 }}, {{ elt.4 }}</span></h4>
   {% endfor %}
-
-
-  <!-- <h4>Mai 2010 -> Oct 2019 : Data Analyst - Python Developper, <span>Home Delivery Services, Melbourne - Australie</span></h4>
-  <h4>Jan 2018 -> Fev 2019 : Data Analyst, <span>Comutitres, Paris - France</span></h4>
-  <h4>Sep 2015 -> Mar 2017 : Front Office Support Analyst, <span>Axa IM, Greenwich - USA</span></h4>
-  <h4>Sep 2014 -> Sep 2015 : Extra Financial Analyst, <span>Amundi, Paris - France</span></h4> -->
-
-
   <div class="resume">
     <a href="{% static 'cv/FR_Geoffroy_Blondel.pdf' %}" download>
       <i class="fas fa-file-pdf fa-3x"></i>
@@ -103,12 +76,9 @@
   </div>
   </div>
 
-
-
   <!-- Projects -->
   <div id="projects" class="container_view">
     <h3 class="elt-center">PROJETS</h3>
-
     {% for row in project %}
     <div class="row_proj">
     {% for elt in row %}
@@ -118,31 +88,15 @@
        <div class="project_skills"><i class="fas fa-tools"></i><p>{{ elt.3 }}</p></div>
      </div>
      {% endfor %}
-
     </div>
     {% endfor %}
-
     <div class="resume">
       <a href="https://github.com/blondelg" download>
         <i class="fab fa-github fa-3x"></i>
         <p>GITHUB</p>
       </a>
     </div>
-
-    <!-- <div class="row_proj">
-      <div class="column_proj">
-        <div class="proj_title"><i class="fab fa-github"></i><h4>Site Pro</h4></div>
-        <p>Developement d'un site vitrine. Avec tout un tas de fonctionnalitées etc, dans le but de trouver des clients </p>
-        <div class="project_skills"><i class="fas fa-tools"></i><p>Django Python HTML CSS </p></div>
-      </div>
-      <div class="column_proj">
-        <div class="proj_title"><i class="fab fa-github"></i><h4>Site Pro</h4></div>
-        <p>Developement d'un site vitrine. Avec tout un tas de fonctionnalitées etc, dans le but de trouver des clients </p>
-        <div class="project_skills"><i class="fas fa-tools"></i><p>Django Python HTML CSS </p></div>
-      </div>
-
-    </div> -->
-
+    <div class="space_exp"></div>
   </div>
 
   <!-- Skills -->
@@ -153,31 +107,14 @@
       <i class="fas fa-tools"></i>
     </div>
     <div class="skill_box">
-
       {% for elt in skill %}
       <p>{{ elt.0 }}</p>
       <div class="skill_bar">
         <div class="skills_bar_2" style="width: {{ elt.1 }}%;">{{ elt.1 }}%</div>
       </div>
       {% endfor %}
-
-      <!-- <p>CSS</p>
-      <div class="skill_bar">
-        <div class="skills_bar_2" style="width: 80%;">80%</div>
-      </div>
-
-      <p>JavaScript</p>
-      <div class="skill_bar">
-        <div class="skills_bar_2"  style="width: 65%;">65%</div>
-      </div>
-
-      <p>PHP</p>
-      <div class="skill_bar">
-        <div class="skills_bar_2" style="width: 60%;">60%</div>
-      </div> -->
     </div>
     </div>
-
   </div>
 
   <!-- Studies and formation  -->
@@ -201,14 +138,10 @@
       <div class="resume">
         <a href="https://www.linkedin.com/in/geoffroy-blondel-5416b893/" download>
           <i class="fab fa-linkedin-in fa-3x"></i>
-          <p class="link_linkedin">Plus de détail</p>
+          <p class="link_linkedin">Plus de détails</p>
         </a>
       </div>
     </div>
-
-
-
-
   </div>
 
   <!-- Contact -->
@@ -218,7 +151,6 @@
     <p><i class="fa fa-phone fa-2x fa-fw" aria-hidden="true"></i>Phone : +33 6 80 56 68 64</p>
     <p><i class="fa fa-envelope fa-2x fa-fw" aria-hidden="true"></i>Email  :  geoffroy.blondel@gmail.com</p>
     <p><i class="fab fa-linkedin-in fa-2x fa-fw"></i>Linkedin  :  <a href="https://www.linkedin.com/in/geoffroy-blondel-5416b893/">www.linkedin.com</a></p>
-
     <img src="{% static 'lars-greefhorst-xYB1xfCnpg0-unsplash.jpg' %}" class="contact_img">
   </div>
 
