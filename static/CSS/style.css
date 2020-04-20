@@ -54,6 +54,11 @@ footer {
   padding-top: 0;
 }
 
+#references .link_linkedin {
+  text-align: center;
+  margin-top: 0;
+}
+
 /* Skills view */
 #skills {
 overflow:auto;
