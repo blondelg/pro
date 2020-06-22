@@ -75,6 +75,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
         os.path.join(BASE_DIR, 'pro_app', 'templates'),
+        os.path.join(BASE_DIR, 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -151,6 +152,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"pro_app/static/photos"),
     os.path.join(BASE_DIR,"pro_app/static/CSS"),
     os.path.join(BASE_DIR,"pro_app/static/cv"),
+    os.path.join(BASE_DIR,"home/static/startbootstrap-clean-blog-gh-pages"),
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
