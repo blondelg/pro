@@ -30,7 +30,6 @@
     </div>
   </div>
 </header>
-    <h1>{{ page.title }}</h1>
 
     <div class="intro">{{ page.intro|richtext }}</div>
 
@@ -39,16 +38,23 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
+          <h1>{{ page.title }}</h1>
           {% for post in blogpages %}
           {% with post=post.specific %}
           <div class="post-preview">
             <a href="{% pageurl post %}">
               <h2 class="post-title">{{ post.title }}</h2>
-              <h3 class="post-subtitle">{{ post.intro }}</h3>
+              <!-- TAGS -->
+              {% if post.tags.all.count %}
+                  <div class="tags">
+                      {% for tag in post.tags.all %}
+                          <a href="{% slugurl 'tags' %}?tag={{ tag }}"><button type="button" class="btn btn-dark btn-sm">{{ tag }}</button></a>
+                      {% endfor %}
+                  </div>
+              {% endif %}
+              <h4 class="post-subtitle">{{ post.intro }}</h4>
             </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2019</p>
+            <p class="post-meta">Posté le {{ post.date }}</p>
           </div>
           {% endwith %}
           {% endfor %}
@@ -58,48 +64,6 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
-          </div>
-        </div>
-      </div>
-    </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/clean-blog.min.js"></script>
 
 {% endblock %}
