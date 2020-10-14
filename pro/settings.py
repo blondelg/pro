@@ -105,7 +105,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {
-            'read_default_file': '/home/geoffroy/Documents/1_projets_persos/20_site_pro/pro/pro/my.cnf',
+            'read_default_file': os.path.join(BASE_DIR, 'pro', 'my.cnf')
         },
     }
 }
